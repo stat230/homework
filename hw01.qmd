@@ -1,7 +1,7 @@
 ---
 title: "Homework 1"
 format: pdf
-due: "Friday, September 17"
+due: "Friday, September 16"
 ---
 
 ## Due date: `r rmarkdown::metadata$due`
