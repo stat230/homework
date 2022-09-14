@@ -74,3 +74,68 @@ g. Pick two categorical variables and make a visualization to visualize the rela
 ```
 
 Interpretation goes here...
+
+
+
+
+## Q2.
+
+```{r load-words}
+# Load the data for Q2 here
+```
+
+### a. 
+
+```{r word-plot}
+# Delete this line and put your code here
+```
+
+Interpretation goes here...
+
+
+### b.
+
+```{r word-ci}
+# Delete this line and put your code here
+```
+
+Interpretation goes here..
+
+
+
+
+
+## Q3.
+
+### a. 
+
+Hypotheses go here...
+
+
+### b.
+
+```{r word-test}
+# Delete this line and put your code here
+```
+
+Interpretation goes here...
+
+
+
+
+
+## Q4.
+
+### a. 
+
+Model goes here...
+
+
+### b.
+
+```{r word-model-checks}
+# Delete this line and put your code here
+```
+
+Interpretation goes here...
+
