@@ -1,0 +1,155 @@
+---
+output: pdf_document
+---
+
+# Homework 2, Stat 230
+## Your Name
+
+
+```{r setup, include=FALSE}
+# Load data and packages in this setup code chunk
+library(mosaic)
+library(ggformula)
+
+# Load the Games2 data set
+# Load the Tires data set
+# Load the Hodgkins data set
+# Load the Skinfold data set
+```
+
+## Q1 -- E.6
+
+
+### a. 
+
+```{r games2-eda}
+# Delete this line and put your code here
+```
+
+Interpretation goes here...
+
+### b. 
+
+```{r games2-anova}
+# Delete this line and put your code here
+```
+
+Conclusion goes here...
+
+### c. 
+
+```{r games2-residuals}
+# Delete this line and put your code here
+```
+
+Interpretation goes here...
+
+### d. 
+
+Discussion goes here...
+
+### e. 
+
+Discussion goes here...
+
+
+
+## Q2 --  E.9
+
+#### a.
+
+```{r tires-eda}
+# Delete this line and put your code here
+```
+
+Interpretation goes here...
+
+
+#### b.
+
+```{r tires-anova}
+# Delete this line and put your code here
+```
+
+Conclusion goes here...
+
+
+#### c.
+
+```{r tires-residuals}
+# Delete this line and put your code here
+```
+
+Interpretation goes here...
+
+
+#### d.
+
+Discussion goes here...
+
+
+
+## Q3 -- E.12
+
+#### a.
+
+```{r hodgkins-eda}
+# Delete this line and put your code here
+```
+
+Interpretation goes here...
+
+
+#### b.
+
+```{r hodgkins-qqplot}
+# Delete this line and put your code here
+```
+
+Interpretation goes here...
+
+
+#### c.
+
+```{r hodgkins-transform}
+# Delete this line and put your code here
+```
+
+Interpretation goes here...
+
+
+#### d.
+
+```{r hodgkins-transform-residuals}
+# Delete this line and put your code here
+```
+
+Interpretation goes here...
+
+
+#### e.
+
+```{r hodgkins-anova}
+# Delete this line and put your code here
+```
+
+Conclusion goes here...
+
+
+## Q4 -- E.15
+
+#### a.
+
+```{r skinfold-transform}
+# Delete this line and put your code here
+```
+
+Results go here...
+
+
+#### b.
+
+```{r skinfold-back-transform}
+# Delete this line and put your code here
+```
+Results and discussion goes here...

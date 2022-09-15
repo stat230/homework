@@ -1,0 +1,67 @@
+---
+title: "Homework 2"
+format: pdf
+due: "Friday, September 23"
+---
+
+## Due date: `r rmarkdown::metadata$due`
+
+Complete the following exercises and submit your assignment via gradescope (linked on the course webpage). To do this, take the following steps:
+
+## Problems to start after class Sept 16
+
+#### Q1. 
+
+Chapter 2 exercise E.6
+
+You can load the `Games2` data set via 
+
+```{r}
+games2 <- read.csv("https://aloy.rbind.io/kuiper_data/Games2.csv")
+```
+
+
+#### Q2.
+
+Chapter 2 exercise E.9
+
+You can load the `Tires` data set via 
+
+```{r}
+tires <- read.csv("https://aloy.rbind.io/kuiper_data/Tires.csv")
+```
+
+
+## Problems to start after class Sept 19
+
+
+#### Q3.
+
+Chapter 2 exercise E.12
+
+You can load the `Hodgkins` data set via 
+
+
+```{r}
+hodgkins <- read.csv("https://aloy.rbind.io/kuiper_data/Hodgkins.csv")
+```
+
+
+#### Q4.
+
+
+Chapter 2 exercise E.15
+
+You can load the `Skinfold` data set via 
+
+
+```{r}
+skinfold <- read.csv("https://aloy.rbind.io/kuiper_data/Skinfold.csv")
+```
+
+:::{.callout-tip}
+In R, `log()` is the natural log (ln) and `log10()` is $\log_{10}$.
+:::
+
+
+<!-- ## Problems to start after class Sept 21 -->
