@@ -100,6 +100,11 @@ The `RailTrails` data set contains information about 104 homes sold in Northampt
 
 Suppose that researchers are interesting in determining whether the selling price of a home in Northampton is impacted by its proximity to a bike trail, and if so how is it impacted. The researchers also want to control for the size of a home.
 
+```{r}
+rails <- read.csv("https://aloy.rbind.io/data/RailsTrails.csv")
+```
+
+
 ```{r include=FALSE}
 data("RailsTrails", package = "Stat2Data")
 rail_mod <- lm(Adj2007 ~ Distance + SquareFeet, data = RailsTrails)
@@ -128,11 +133,28 @@ rail_mod <- lm(Adj2007 ~ Distance + SquareFeet, data = RailsTrails)
 
 Read the description of the `Politics` data set given in Chapter 3 exercise E.12 and answer the following questions.
 
+
+
+(a) Complete part (a) in  Chapter 3 exercise E.12 by loading the data. The column is called `pct_dem`.
+
 ```{r}
 politics <- read.csv("https://aloy.rbind.io/kuiper_data/Politics.csv")
 ```
 
-(a) Complete part (a) in  Chapter 3 exercise E.12. You can use the following code.
+```{r eval=FALSE, include=FALSE}
+library(dplyr)
+politics <- politics |>
+  filter(States != "Nebraska") |>
+  mutate(across(starts_with("X2001"), as.numeric)) |>
+  mutate(
+    lower_dem =  100 * X2001.Lower.Democrat / 
+      (X2001.Lower.Democrat + X2001.Lower.Republican + X2001.Lower.Other + X2001.Lower.Vacancies),
+    upper_dem =  100 * X2001.Upper.Democrat /  
+      (X2001.Upper.Democrat + X2001.Upper.Republican + X2001.Upper.Other + X2001.Upper.Vacancies) + X2001.Upper.Other + X2001.Upper.Vacancies,
+    pct_dem = (lower_dem + upper_dem)/2
+  )
+```
+
 
 (b) You will fit a multiple linear regression model using the response variable you just created in part (a) and the quantitative variables as explanatory variables (`Unemployed`, `Bachelor.s`, `Retirement`, `MedianIncome`, `Christian`, `NumberPeoplePerFamily`, `HealthInsurance`, `Voted`). Before you do this, formulate hypotheses about how each explanatory variable will be related to voting patterns.
 
