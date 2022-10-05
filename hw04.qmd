@@ -85,3 +85,57 @@ trex <- read.csv("https://aloy.rbind.io/data/trexbones.csv")
 
 (i) Why might pairs (or groups) of influential observations not be found with the usual case influence statistics?
 
+
+### Problems to start after class Oct 5
+
+#### Q5
+
+The `RailTrails` data set contains information about 104 homes sold in Northampton, Mass., in 2007. In this problem, you will use the following variables:
+
+| Variables | Description|
+|----|------------|
+| `Adj2007` | Estimated 2007 price (in thousands of 2014 dollars)|
+| `Distance` | Distance (in miles) to the nearest entry point to the rail trail network |
+| `SquareFeet` | Square footage of interior finished space (in thousands of square feet)
+
+Suppose that researchers are interesting in determining whether the selling price of a home in Northampton is impacted by its proximity to a bike trail, and if so how is it impacted. The researchers also want to control for the size of a home.
+
+```{r include=FALSE}
+data("RailsTrails", package = "Stat2Data")
+rail_mod <- lm(Adj2007 ~ Distance + SquareFeet, data = RailsTrails)
+```
+
+(a) Fit the simple linear model predicting `Adj2007` using `Distance`. Report the fitted regression equation and the $R^2$ value.
+
+(b) Fit the multiple linear regression model  predicting `Adj2007` using both `Distance` and `SquareFeet`. Report the fitted regression equation and the $R^2$ value. How has the addition of `SquareFeet` changed the model?
+
+(c) Using the MLR model, interpret the estimated slope for `Distance` in context.
+
+(d) Using the MLR model, calculate a 95% confidence interval for the `Distance` coefficient and interpret it in context.
+
+(e) Using the MLR model, predict the price of a particular home that is 1500 ft<sup>2</sup> and 0.5 miles from a bike trail.
+
+(f) Create the appropriate interval (either confidence or prediction) for your prediction in part (e). You can use the same R code as with simple linear regression, but now your `newdata` data frame need to have two variables:
+
+    ```{r eval=FALSE}
+    data.frame(Distance = 0.5, SquareFeet = 1.5)
+    ```
+
+(g) Assess the assumptions necessary for your analysis to be valid. 
+
+
+#### Q6
+
+Read the description of the `Politics` data set given in Chapter 3 exercise E.12 and answer the following questions.
+
+```{r}
+politics <- read.csv("https://aloy.rbind.io/kuiper_data/Politics.csv")
+```
+
+(a) Complete part (a) in  Chapter 3 exercise E.12. You can use the following code.
+
+(b) You will fit a multiple linear regression model using the response variable you just created in part (a) and the quantitative variables as explanatory variables (`Unemployed`, `Bachelor.s`, `Retirement`, `MedianIncome`, `Christian`, `NumberPeoplePerFamily`, `HealthInsurance`, `Voted`). Before you do this, formulate hypotheses about how each explanatory variable will be related to voting patterns.
+
+(c) Fit the multiple linear regression model using the response variable you just created in part (a) and the quantitative variables as explanatory variables.
+
+(d) Complete part (d) in  Chapter 3 exercise E.12. When you state your conclusion about each hypothesis, be sure to use some inferential procedure to support your conclusion.
