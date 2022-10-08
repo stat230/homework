@@ -1,0 +1,50 @@
+---
+title: "Homework 5 -- Stat 230 -- Fall 2022"
+format: pdf
+due: "Friday, October 14"
+---
+
+## Due date: `r rmarkdown::metadata$due`
+
+Complete the following exercises and submit your assignment via gradescope (linked on the course webpage). 
+
+
+
+### Problems to start after class Oct 7 
+
+#### Q1
+
+How do bats make their way about in the dark? Echolocation requires a lot of energy. In this problem, you will explore how energy expenditure is related to body mass from 20 energy studies on three types of flying vertebrates: echolocating bats, non–echolocating bats and non–echolocating birds.
+
+
+```{r}
+bats <- read.csv("https://aloy.rbind.io/data/bats.csv")
+```
+
+(a) Fit a multiple linear regression model with `log(Energy)` as the response variable and `log(Mass)` and `Type` as the predictor variables. Report the fitted regression equation.
+
+(b) What indicator variables did R create to represent the categorical variable `Type`?
+
+(c) Based on the fitted model you reported in part (a), write a fitted model equation for each type of flying vertebrates (echolocating bats, non–echolocating bats and non–echolocating birds).
+
+(d) Conduct the sums of squares F-test that can be used to determine whether `Type` is associated with the energy after accounting for mass. State the hypotheses, p-value, and conclusion in terms of the problem (that is, say things about the flying vertebrates).
+
+
+#### Q2
+
+Data were collected on the volume of users on the Northampton Rail Trail in Florence, Massachusetts. Variables in the data set include the number of crossings on a particular day (measured by a sensor near the intersection with Chestnut Street, `volume`), the average of the min and max temperature in degrees Fahrenheit for that day (`avgtemp`), and a dichotomous indicator of whether the day was a weekday or a weekend/holiday (`weekday`).
+
+```{r message=FALSE, warning=FALSE}
+railtrail <- read.csv("http://aloy.rbind.io/data/RailTrail.csv")
+```
+
+Consider the following full linear model predicting the volume on the Northampton Rail Trail.
+
+```{r}
+rail_lm <- lm(volume ~ hightemp + lowtemp + cloudcover + precip, data = railtrail)
+```
+
+(a) Test whether `cloudcover` can be dropped from the regression model given that `precipitation`, `hightemp`, and `lowtemp` are retained. Use an appropriate F test. State the hypotheses, p-value, and conclusion in terms of the problem (that is, say things about the rail trails and an appropriate population). [Note: you should know how to do this by hand given the ANOVA table. However, R will do the test for you with the code `anova(model1, model2)`.]
+
+
+(b) Test whether both `lowtemp` and `cloudcover` can be dropped from the model given that `hightemp` and `precipitation` are retained. Use an appropriate F test. State the hypotheses, p-value, and conclusion in terms of the problem (that is, say things about the rail trails and an appropriate population).
