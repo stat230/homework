@@ -48,3 +48,52 @@ rail_lm <- lm(volume ~ hightemp + lowtemp + cloudcover + precip, data = railtrai
 
 
 (b) Test whether both `lowtemp` and `cloudcover` can be dropped from the model given that `hightemp` and `precipitation` are retained. Use an appropriate F test. State the hypotheses, p-value, and conclusion in terms of the problem (that is, say things about the rail trails and an appropriate population).
+
+
+
+### Problems to start after class Oct 10
+
+#### Q3 (adapted from *Statistical Sleuth* 9.19)
+
+R.A. Miech and M.J. Shanahan[^1] investigated the association of depression with age and education, based on a 1990 nationwide (U.S.) telephone survey of 2,031 adults aged 18 to 90. Of particular interest was their finding that the association of depression with education strengthens with increasing age---a phenomenon they called the "divergence hypothesis."
+
+The researchers constructed a depression score from responses to several related questions. Education was categorized as (i) college degree, (ii) high school degree plus some college, or (iii) high school degree only. 
+
+[^1]: Miech, R. A., & Shanahan, M. J. (2000). Socioeconomic status and depression over the life course. *Journal of health and social behavior*, 162-176.
+
+For parts (a) and (b) carefully write the mean function (i.e., signal) that you would use to represent the following situations. Be sure to clearly define any indicator variables that you use---don't make us guess!
+
+(a) The depression score should change linearly with age in all three education categories, with possibly unequal slopes and intercepts.
+
+(b) Modify your model from part (a) to specify that slopes of the regression lines are equal in categories (i) and (ii) of education but possibly different in category (iii). The y-intercepts should still be possible unequal for all three categories.
+
+(c) Based on your model in part (a), identify a single regression coefficient that measures the diverging gap between categories (iii) and (i) with age. That is, what coefficient allows the   difference in mean depression score for college (i) and high school only (iii) to widen as people age.
+
+(d) Based on your model in part (b), identify a single regression coefficient that measures the diverging gap between categories (iii) and (i) with age.
+
+
+#### Q4
+
+The `RailTrails` data set contains information about 104 homes sold in Northampton, Mass., in 2007. In this problem, you will use the following variables:
+
+| Variables | Description|
+|----|------------|
+| `Adj2007` | Estimated 2007 price (in thousands of 2014 dollars)|
+| `Distance` | Distance (in miles) to the nearest entry point to the rail trail network |
+| `SquareFeet` | Square footage of interior finished space (in thousands of square feet) |
+| `NumFullBaths` | Number of full bathrooms in the house |
+
+Suppose that researchers are interesting in determining whether the selling price of a home in Northampton is impacted by its proximity to a bike trail, and if so how is it impacted. The researchers also want to control for the size of a home and the number of full bathrooms.
+
+```{r}
+rails <- read.csv("https://aloy.rbind.io/data/RailsTrails.csv")
+```
+
+(a) Fit the multiple linear regression model using `log(Adj2007)` as the response and `log(Distance)`,  `log(SquareFeet)`, and `NumFullBaths` as the predictors. Report the fitted regression equation.
+
+(b) Assess the model conditions for the model using residual plots and write a brief summary of your findings.
+
+(c) Fit a model that adds interactions between all of the explanatory variables, so there will be three two-way interaction terms and one three-way interaction term. Report the fitted regression equation.
+
+(d) Use an appropriate F-test to determine whether the model complex model in part (c) is a substantial improvement over the simpler model you fit in part (a). Report your findings.
+
