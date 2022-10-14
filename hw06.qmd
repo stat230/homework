@@ -51,7 +51,7 @@ broom::tidy(mod)
 (c) You should have found that only one of the slopes was statistically discernibly different from 0 based on the individual t-tests. Your friend, who hasn't taken Stat 230 is surprised by this, since they were convinced that both the percent fat and the percent lactose would be important predictors based on the scatterplot matrix. Explain to your friend why this isn't surprising.
 
 
-(d) Caclulate the variance inflation factor for each predictor. Are there any indications of multicollinearity?
+(d) Calculate the variance inflation factor for each predictor. Are there any indications of multicollinearity?
 
 
 #### Q3
