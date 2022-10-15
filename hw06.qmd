@@ -16,6 +16,10 @@ Complete the following exercises and submit your assignment via gradescope
 
 Chapter 2 exercise E.16 
 
+```{r}
+wings <- read.csv("https://aloy.rbind.io/kuiper_data/WingLength2.csv")
+```
+
 :::{.callout-note}
 # Polynomial regression in R
 
@@ -33,6 +37,11 @@ The key is to put your polynomial terms inside an `I()`.
 
 The `milk` data set contains comparative primate milk composition data taken from 
 Table 2 of Hinde and Milligan (2011) *Evolutionary Anthropology* 20:9-23.
+
+```{r}
+milk <- read.csv("https://aloy.rbind.io/data/milk.csv")
+```
+
 
 (a) Create a scatterplot matrix displaying the kilocalories per gram of milk (`kcal.per.g`), the percent fat (`perc.fat`), and percent lactose (`perc.lactose`). Describe the associations you see.
 
