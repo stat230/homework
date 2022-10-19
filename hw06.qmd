@@ -66,3 +66,47 @@ broom::tidy(mod)
 #### Q3
 
 Explain why multicollinearity it not a problem for researchers who are trying to develop a model that accurately predict their response.
+
+
+
+### Problems to start after class Oct 19
+
+#### Q4
+
+Suppose that you are a wine enthusiast and wish to understand what factors impact the price of fine wine, which would allow you to find good deals. You collect data on 72 wines, recording the following variables:
+
+| Variable | Description |
+|---|-------------|
+| wine | Name of the winery (character vector) |
+| price | price (in pounds sterling) of 12 bottles of wine |
+| parker | Robert Parker’s rating (out of 100) |
+| coates | Clive Coate’s rating (out of 20) |
+| p95 | Is Parker’s score above 95? 1 = yes, 0 = no |
+| first.growth | Is the wine a first growth?  1 = yes, 0 = no |
+| cult | Is the wine considered to be a cult favorite?  1 = yes, 0 = no |
+| pomerol | Is the wine from Pomerol?  1 = yes, 0 = no |
+| superstar | Is the wine a vintage superstar as awarded by Parker?  1 = yes, 0 = no |
+
+To load the data set, run
+
+```{r}
+wine <- read.csv("https://aloy.rbind.io/data/bordeaux.csv")
+```
+
+
+(a) Develop a single multiple regression model that enables you to do the following:
+
+    - estimate the percentage effect on price of a 1% increase in Parker Points and a 1% increase in Coates Points
+    - control for the impacts of first growth, cult favorite wines, and wines from the Pomerol region
+    - comment on the following claim from Eric Samazeuilh (a courtier):
+        > "Parker is the wine writer who matters. Clive Coates is very serious and well respected, but in terms of commercial impact his influence is zero."
+   
+    Are the model assumptions reasonable for your model? To answer this question include only a single "final" model that you feel adequately fits the data and show that it is adequate (or close enough to adequate).
+    
+(b) Report the fitted regression equation for your multiple regression model.
+
+(c) Using your multiple linear regression model, estimate the percentage effect on price of a 1% increase in Parker Points and a 1% increase in Coates Points.
+
+(d) Using your multiple linear regression model to justify your answer, comment on the above claim from Eric Samazeuilh.
+
+(e) Identify the wines in the data set which, given the values of the predictor variables, are (i) unusually high priced, and (ii) unusually low priced.
