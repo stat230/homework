@@ -9,6 +9,10 @@ due: "Friday, October 28"
 Complete the following exercises and submit your assignment via gradescope 
 (linked on the course webpage). 
 
+:::{.callout-note}
+When the book asks you to "Interpret the model in terms of the odds ratio," it is asking you to interpret the slope of the logistic regression model.
+:::
+
 ### Problems to start after class Oct 21 
 
 #### Q1
@@ -39,6 +43,7 @@ being accepted).
 Chapter 7 exercise E.1
 
 - After class on October 21, you will be able to complete part (a)
+- After class on October 24, you will be able to complete parts (b)-(c)
 
 Use the following code to load the data. Notice that `*` is used to denote missing values, so we add the `na.strings` argument to handle this.
 ```{r}
@@ -51,7 +56,15 @@ birdnest <- read.csv("https://aloy.rbind.io/kuiper_data/Birdnest.csv", na.string
 Chapter 7 exercise E.2
 
 - After class on October 21, you will be able to complete part (a)
+- After class on October 24, you will be able to complete parts (b)-(c)
 
 ```{r}
 donner <- read.csv("https://aloy.rbind.io/kuiper_data/Donner.csv")
 ```
+
+
+### Problems to start after class Oct 24
+
+#### Q4
+
+Chapter 7 exercise E.5
