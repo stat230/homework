@@ -44,6 +44,8 @@ Chapter 7 exercise E.1
 
 - After class on October 21, you will be able to complete part (a)
 - After class on October 24, you will be able to complete parts (b)-(c)
+- Skip parts (d) and (e)
+- After class on October 26, you will be able to complete part (f)
 
 Use the following code to load the data. Notice that `*` is used to denote missing values, so we add the `na.strings` argument to handle this.
 ```{r}
@@ -56,11 +58,19 @@ birdnest <- read.csv("https://aloy.rbind.io/kuiper_data/Birdnest.csv", na.string
 Chapter 7 exercise E.2
 
 - After class on October 21, you will be able to complete part (a)
-- After class on October 24, you will be able to complete parts (b)-(c)
+- After class on October 24, you will be able to complete parts (b)-(d)
+- After class on October 26, you will be able to complete parts (e)-(g)
 
 ```{r}
 donner <- read.csv("https://aloy.rbind.io/kuiper_data/Donner.csv")
 ```
+
+For part (f) you can construct a two-way table like we did back in the EDA section. If you have {mosaic} loaded, then you can use the `tally()` command:
+```{r}
+#| eval: false
+tally(Survived ~ Gender, data = donner)
+```
+
 
 
 ### Problems to start after class Oct 24
@@ -68,3 +78,23 @@ donner <- read.csv("https://aloy.rbind.io/kuiper_data/Donner.csv")
 #### Q4
 
 Chapter 7 exercise E.5
+
+
+### Problems to start after class Oct 26
+
+#### Q5
+
+Chapter 7 exercise E.9 parts (a)-(c)
+
+*Hint:* You can use effects plots to display the estimated probabilities of survival in parts (a) and (b).
+
+
+#### Q6
+
+In this problem, you will look at the response residuals and measures of association to assess the two models you explore in Q5.
+
+(a) Create a binned residual plot for where age is plotted on the x-axis for the no-interaction model from Q5 (a) and calculate the average response residual for each gender. What do the plot and group means say about the adequacy of the model? 
+
+(b) Create a binned residual plot for where age is plotted on the x-axis for the no-interaction model from Q5 (b) and calculate the average response residual for each gender. What do the plot and group means say about the adequacy of the model? 
+
+(c) Compare the three measures of association (Somers' D, Goodman-Kruskall gamma, and Kendall's tau-a) for the two fitted models. What do they tell you?
