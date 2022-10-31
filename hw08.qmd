@@ -21,6 +21,7 @@ When the book asks you to "Interpret the model in terms of the odds ratio," it i
 A large number of volunteers participated in a randomized experiment to assess the effect of large doses of vitamin C on the incidence of colds.  The subjects were given tablets to take daily, but neither the subjects nor the doctors who evaluated them were aware of the dose of vitamin C contained in the tablets. You can load the data from this study by running the following code:
 
 ```{r}
+# Data set will be called ex2113
 data("ex2113", package = "Sleuth3")
 ```
 
@@ -57,4 +58,38 @@ budworm <- read.csv("http://aloy.rbind.io/data/budworm.csv")
 (d) Create a plots of the Pearson residuals versus the predictors for the model from part (c). Is there any evidence of nonlinearity?
 
 (e) Interpret the regression coefficients from the transformed model in terms of the odds ratio (i.e., on the odds scale). Remember that `dose` has a log base 2 transformation applied. While we haven't discussed this interpretation in class, it will be just like how we interpret a transformed coefficient in linear regression, so think about a doubling of dose.
+
+
+### Problems to start after class Oct 31
+
+#### Q3
+(*Adapted from Statistical Sleuth problem 12.16*)
+
+An experiment at the Marine/Freshwater Biomedical Sciences Center at Oregona State University investigated the carcinogenic effects of aflatoxicol, a metabolite of Aflatoxin B1, which is a toxic by-product produced by a mold that infects cottonseed meal, peanuts, and grains. Twenty tanks of rainbow trout embryos were exposed to one of five doses of Aflatoxicol for one hour. 
+
+The data can be loaded via
+
+```{r}
+# Data set will be called ex2116
+data("ex2116", package = "Sleuth3")
+```
+
+and contain the dose (in ppm), the number of fish in each tank, and the number of these that had liver tumors after one year.
+
+
+(a) Make a plot of the empirical (sample) log-odds of cancer vs. dose. Comment on what you see.
+
+(b) Fit the logistic regression model for the odds of cancer using dose as the sole predictor. Plot the deviance residuals versus the dose. Is there evidence of nonlinearity?
+
+(c) Now make a plot of the empirical log-odds of cancer vs. log(dose). Comment on what you see.
+
+(d) Fit the logistic regression model for the odds of cancer using log(dose) as the sole predictor. Plot the Pearson residuals versus the log(dose). Is there evidence of nonlinearity?
+
+(e) Fit the logistic regression model for the odds of cancer using log(dose) and (log(dose))$^2$ as predictors. Look at the residuals and argue that there is no longer evidence of nonlinearity.
+
+(f) Give the dose at which your model estimates 50% chance of getting a tumor. (Hint: if p = 0.5 then the log odds equals zero. The problem requires you to use the quadratic formula for solving a quadratic equation.)
+
+(g) Refit the model in part (e) using the quasibinomial procedure. Give the dispersion parameter estimate.
+Compare the standard errors from the quasibinomial model to the standard binomial model. Explain
+why the design of this experiment might make one suspect overdispersion. (Hint: was tank in the model?)
 
