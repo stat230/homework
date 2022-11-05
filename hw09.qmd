@@ -1,0 +1,49 @@
+---
+title: "Homework 9 -- Stat 230 -- Fall 2022"
+format: pdf
+due: "Friday, November 11"
+---
+
+## Due date: `r rmarkdown::metadata$due`
+
+Complete the following exercises and submit your assignment via gradescope 
+(linked on the course webpage). 
+
+:::{.callout-note}
+When the book asks you to "Interpret the model in terms of the odds ratio," it is asking you to interpret the slope of the logistic regression model.
+:::
+
+### Problems to start after class Nov 4
+
+#### Q1
+
+Chapter 8, exercise E.1 parts (a) and (c)
+
+
+#### Q2
+
+Read the prompt for Chapter 8 exercise E.7 , but then answer the following questions.
+
+```{r}
+skincancer <- read.csv("https://aloy.rbind.io/kuiper_data/SkinCancer.csv")
+```
+
+(a) Fit a Poisson regression model that uses the continuous version of age (`Age.Midpoint`) to describe the non-melanoma skin cancer incidence. Don't forget to include the population as an exposure offset in your model. Report the fitted model equation.
+
+(b) Interpret the slope for age in context.
+
+(c) What is the predicted cancer rate for the 55-64 ages group (where `Age.Midpoint` is 60)?
+
+(d) Create a scatterplot of the incidence rate against the continuous version of age (`Age.Midpoint`). Do you have any concerns about using your Poisson regression model from part (a)?
+
+
+
+<!-- ### Problems to start after class Nov 7 -->
+
+<!-- #### Q2 -->
+
+<!-- Chapter 9, exercise E.7 -->
+
+<!-- #### Q3 -->
+
+<!-- Chapter 9, exercise E.8 -->
