@@ -38,12 +38,12 @@ skincancer <- read.csv("https://aloy.rbind.io/kuiper_data/SkinCancer.csv")
 
 
 
-<!-- ### Problems to start after class Nov 7 -->
+### Problems to start after class Nov 7
 
-<!-- #### Q2 -->
+#### Q3
 
-<!-- Chapter 9, exercise E.7 -->
+Chapter 9, exercise E.7
 
-<!-- #### Q3 -->
+#### Q4
 
-<!-- Chapter 9, exercise E.8 -->
+Chapter 9, exercise E.8
