@@ -44,6 +44,20 @@ skincancer <- read.csv("https://aloy.rbind.io/kuiper_data/SkinCancer.csv")
 
 Chapter 8, exercise E.7
 
+To load the data and extract only the rows for Minneapolis-St. Paul, run the following code:
+
+```{r}
+msp <- read.csv("https://aloy.rbind.io/kuiper_data/SkinCancer.csv") |>
+  dplyr::filter(Town == "Minneapolis-St Paul, Minnesota")
+```
+
 #### Q4
 
 Chapter 8, exercise E.8
+
+To load the data and extract only the rows for Minneapolis-St. Paul, run the following code:
+
+```{r}
+dfw <- read.csv("https://aloy.rbind.io/kuiper_data/SkinCancer.csv") |>
+  dplyr::filter(Town == "Dallas-Fort Worth, Texas")
+```
