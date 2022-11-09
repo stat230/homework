@@ -61,3 +61,37 @@ To load the data and extract only the rows for Minneapolis-St. Paul, run the fol
 dfw <- read.csv("https://aloy.rbind.io/kuiper_data/SkinCancer.csv") |>
   dplyr::filter(Town == "Dallas-Fort Worth, Texas")
 ```
+
+
+### Problems to start after class Nov 9
+
+#### Q5
+
+Chapter 8, exercise E.5
+
+We'll talk about overdispersion and zero-inflation on Friday, so for part (f) focus on other ways to check the model's adequacy.
+
+```{r}
+apexams <- read.csv("https://aloy.rbind.io/kuiper_data/APExams.csv")
+```
+
+
+#### Q6
+
+Chapter 8, exercise E.6
+
+```{r}
+hurricanes <- read.csv("https://aloy.rbind.io/kuiper_data/Hurricanes.csv")
+```
+
+In part (a), you can calculate the response variable, the total number of hurricanes, using `dplyr::mutate()`:
+
+```{r}
+hurricanes <- hurricanes |> dplyr::mutate(count = cat1 + cat2 + cat3 + cat4 + cat5)
+```
+
+In part (b), you can calculate the response variable, the total number of intense hurricanes, using `dplyr::mutate()`:
+
+```{r}
+hurricanes <- hurricanes |> dplyr::mutate(intense = cat3 + cat4 + cat5)
+```
